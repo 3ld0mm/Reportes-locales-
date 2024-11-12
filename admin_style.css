@@ -1,0 +1,173 @@
+/* Estilos generales para el contenedor principal */
+.admin-container {
+    max-width: 1500px; /* Ajustado para más espacio */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.admin-container h1 {
+    color: #2c3e50; /* Azul oscuro */
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Información del administrador */
+.admin-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-info p {
+    color: #2c3e50; /* Texto gris suave */
+    font-size: 16px;
+}
+
+/* Botón de cerrar sesión */
+.logout-btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #2c3e50;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #1a2733;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.logout-btn:hover {
+    background: rgb(255, 71, 71);
+    box-shadow: 0 0 30px 5px rgba(236, 0, 0, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.logout-btn:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+.logout-btn::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #2c3e50;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+  
+@keyframes sh02 {
+from {
+    opacity: 0;
+    left: 0%;
+}
+
+50% {
+    opacity: 1;
+}
+
+to {
+    opacity: 0;
+    left: 100%;
+}
+}
+  
+.logout-btn:active {
+    box-shadow: #2c3e50;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+  
+
+
+
+
+/* Estilos para la tabla de reportes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    background-color: #2a3f54;
+    color: #ffffff;
+}
+
+/* Estilos para el select y el botón */
+td select {
+    min-width: 150px; /* Ampliado para evitar el recorte de texto */
+    font-size: 14px;
+    padding: 5px;
+}
+
+input[type='submit'] {
+    background-color: #2a3f54;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type='submit']:hover {
+    background-color: #1a2733;
+}
+
+/* Botón de eliminación */
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ff4d4f; /* Rojo para resaltar */
+    font-size: 1.2em;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #e60023; /* Un rojo más oscuro al pasar el cursor */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+.delete-btn:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+}
+
+/* Icono de Font Awesome */
+.fa-trash {
+    margin-left: 8px; /* Espacio a la izquierda del icono */
+}
+
+
+
+

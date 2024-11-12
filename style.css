@@ -1,0 +1,312 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Menú principal */
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Botón para reportar */
+.report-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Espacio para el mapa */
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas de los campos */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Información de contacto */
+.contact-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Lista de casos */
+.cases-list {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.case-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.case-item:last-child {
+    border-bottom: none;
+}
+
+.case-category {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Estado de los casos */
+.case-status {
+    float: right;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.notification {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4CAF50; /* Verde para éxito */
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    max-width: 80%;
+    width: 300px;
+}
+.notification.error {
+    background-color: #f44336; /* Rojo para error */
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center; /* Centra los enlaces principales */
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: relative; /* Para posicionar el botón de Admin */
+}
+
+/* Estilo para los enlaces principales del menú */
+.main-menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Botón de Admin alineado a la derecha */
+.login-link {
+    position: absolute;
+    right: 20px; /* Ubica el botón en la esquina derecha */
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-link:hover {
+    background-color: #ffff00;
+}
+
+/* Estado de los casos con colores */
+.estado-pendiente {
+    background-color: #FFA500; /* Naranja para 'Pendiente' */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.estado-en-proceso {
+    background-color: #1E90FF; /* Azul para 'En Progreso' */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.estado-resuelto {
+    background-color: #32CD32; /* Verde para 'Resuelto' */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+
+/* Contenedor de la lista de casos */
+.cases-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cada caso */
+.case-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #4CAF50;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.case-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Categoría y descripción */
+.case-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.case-category {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.case-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Estado del caso */
+.case-status {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    min-width: 100px;
+}
+
+/* Colores para los estados */
+.status-Pendiente {
+    background-color: #FFA500; /* Naranja para 'Pendiente' */
+}
+
+.status-En-progreso {
+    background-color: #1E90FF; /* Azul para 'En Progreso' */
+}
+
+.status-Resuelto {
+    background-color: #32CD32; /* Verde para 'Resuelto' */
+}
+
+/* Información adicional */
+.case-item small {
+    display: block;
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 8px;
+}
